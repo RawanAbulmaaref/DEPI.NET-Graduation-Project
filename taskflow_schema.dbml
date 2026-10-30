@@ -1,0 +1,573 @@
+// TaskFlow physical schema (SQL Server) - paste into https://dbdiagram.io/d
+// Derived attributes are NOT stored. Users maps to the ASP.NET Identity users table.
+
+Project TaskFlow {
+  database_type: 'SQLServer'
+}
+
+// ---------- IDENTITY & TEAMS ----------
+Table Users {
+  Id nvarchar(450) [pk]
+  FirstName nvarchar(100) [not null]
+  LastName nvarchar(100) [not null]
+  Email nvarchar(256) [not null, unique]
+  PasswordHash nvarchar(max) [not null]
+  ThemePreference nvarchar(20) [not null]
+  AccountStatus nvarchar(20) [not null]
+  RegisteredAt datetime2 [not null]
+}
+
+Table TeamRoles {
+  Id int [pk, increment]
+  Name nvarchar(50) [not null, unique]
+  HierarchyLevel int [not null]
+  Description nvarchar(300)
+}
+
+Table Permissions {
+  Id int [pk, increment]
+  Name nvarchar(100) [not null, unique]
+  Description nvarchar(300)
+}
+
+Table RolePermissions {
+  RoleId int [not null]
+  PermissionId int [not null]
+  indexes {
+    (RoleId, PermissionId) [pk]
+  }
+}
+
+Table Workspaces {
+  Id int [pk, increment]
+  OwnerId nvarchar(450) [not null]
+  Name nvarchar(200) [not null]
+  Description nvarchar(1000)
+  SettingsJson nvarchar(max)
+  CreatedAt datetime2 [not null]
+}
+
+Table Teams {
+  Id int [pk, increment]
+  WorkspaceId int [not null]
+  Name nvarchar(200) [not null]
+  Description nvarchar(1000)
+  CreatedAt datetime2 [not null]
+}
+
+Table TeamMemberships {
+  Id int [pk, increment]
+  TeamId int [not null]
+  UserId nvarchar(450) [not null]
+  RoleId int [not null]
+  JoinedAt datetime2 [not null]
+  Status nvarchar(20) [not null]
+  indexes {
+    (TeamId, UserId) [unique]
+  }
+}
+
+Table Invitations {
+  Id int [pk, increment]
+  TeamId int [not null]
+  RoleId int [not null]
+  SentById nvarchar(450) [not null]
+  InviteeEmail nvarchar(256) [not null]
+  SentAt datetime2 [not null]
+  ExpiresAt datetime2 [not null]
+  Status nvarchar(20) [not null]
+}
+
+// ---------- PROJECTS & BOARDS ----------
+Table ProjectTemplates {
+  Id int [pk, increment]
+  Name nvarchar(100) [not null, unique]
+  Description nvarchar(500)
+}
+
+Table ProjectTemplateColumns {
+  Id int [pk, increment]
+  TemplateId int [not null]
+  Name nvarchar(100) [not null]
+  Position int [not null]
+}
+
+Table Projects {
+  Id int [pk, increment]
+  WorkspaceId int [not null]
+  CreatedById nvarchar(450) [not null]
+  TemplateId int
+  Name nvarchar(200) [not null]
+  Description nvarchar(2000)
+  PlannedStartDate date
+  PlannedEndDate date
+  SettingsJson nvarchar(max)
+  IsArchived bit [not null]
+  ArchivedAt datetime2
+  CreatedAt datetime2 [not null]
+}
+
+Table TeamProjects {
+  TeamId int [not null]
+  ProjectId int [not null]
+  indexes {
+    (TeamId, ProjectId) [pk]
+  }
+}
+
+Table Boards {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(200) [not null]
+  Description nvarchar(1000)
+  DisplayOrder int [not null]
+  CreatedAt datetime2 [not null]
+}
+
+Table BoardColumns {
+  Id int [pk, increment]
+  BoardId int [not null]
+  Name nvarchar(100) [not null]
+  Position int [not null]
+  WipLimit int
+  IsCompletionColumn bit [not null]
+  indexes {
+    (BoardId, Name) [unique]
+  }
+}
+
+Table Swimlanes {
+  Id int [pk, increment]
+  BoardId int [not null]
+  Name nvarchar(100) [not null]
+  Position int [not null]
+  CategorizationCriterion nvarchar(50)
+  indexes {
+    (BoardId, Name) [unique]
+  }
+}
+
+Table Sprints {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(100) [not null]
+  StartDate date [not null]
+  EndDate date [not null]
+  Goal nvarchar(500)
+}
+
+Table Milestones {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(200) [not null]
+  MilestoneDate date [not null]
+  Description nvarchar(500)
+  Status nvarchar(20) [not null]
+}
+
+Table Labels {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(50) [not null]
+  Color nvarchar(7) [not null]
+  Description nvarchar(200)
+}
+
+Table CustomFields {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(100) [not null]
+  DataType nvarchar(30) [not null]
+}
+
+Table CustomFieldAllowedValues {
+  Id int [pk, increment]
+  CustomFieldId int [not null]
+  Value nvarchar(200) [not null]
+}
+
+// ---------- TASKS ----------
+Table TaskTemplates {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(100) [not null]
+  DefaultTitle nvarchar(200)
+  DefaultDescription nvarchar(max)
+  DefaultPriority nvarchar(20)
+  DefaultEstimatedHours float
+  RecurrenceType nvarchar(30)
+  RecurrenceInterval int
+}
+
+Table TaskTemplateChecklistItems {
+  Id int [pk, increment]
+  TaskTemplateId int [not null]
+  Title nvarchar(200) [not null]
+  Position int [not null]
+}
+
+Table Tasks {
+  Id int [pk, increment]
+  ColumnId int [not null]
+  SwimlaneId int
+  SprintId int
+  MilestoneId int
+  TaskTemplateId int
+  CreatedById nvarchar(450) [not null]
+  Title nvarchar(200) [not null]
+  Description nvarchar(max)
+  Priority nvarchar(20) [not null]
+  StartDate date
+  DueDate date
+  EstimatedHours float
+  BoardPosition int [not null]
+  IsArchived bit [not null]
+  ArchivedAt datetime2
+  CreatedAt datetime2 [not null]
+  CompletedAt datetime2
+  LastModifiedAt datetime2 [not null]
+  RowVersion rowversion [not null, note: 'generated by SQL Server on every insert/update']
+}
+
+Table ChecklistItems {
+  Id int [pk, increment]
+  TaskId int [not null]
+  Title nvarchar(200) [not null]
+  IsCompleted bit [not null]
+  Position int [not null]
+  CompletedAt datetime2
+}
+
+Table TaskAssignees {
+  TaskId int [not null]
+  UserId nvarchar(450) [not null]
+  AssignedAt datetime2 [not null]
+  indexes {
+    (TaskId, UserId) [pk]
+  }
+}
+
+Table TaskLabels {
+  TaskId int [not null]
+  LabelId int [not null]
+  indexes {
+    (TaskId, LabelId) [pk]
+  }
+}
+
+Table TaskDependencies {
+  SuccessorTaskId int [not null]
+  PredecessorTaskId int [not null]
+  DependencyType nvarchar(30) [not null]
+  LagMinutes int [not null]
+  indexes {
+    (SuccessorTaskId, PredecessorTaskId) [pk]
+  }
+}
+
+Table TaskCustomFieldValues {
+  TaskId int [not null]
+  CustomFieldId int [not null]
+  Value nvarchar(500)
+  indexes {
+    (TaskId, CustomFieldId) [pk]
+  }
+}
+
+// ---------- COLLABORATION ----------
+Table Comments {
+  Id int [pk, increment]
+  TaskId int [not null]
+  AuthorId nvarchar(450) [not null]
+  ParentCommentId int
+  Content nvarchar(max) [not null]
+  PostedAt datetime2 [not null]
+  EditedAt datetime2
+}
+
+Table CommentMentions {
+  CommentId int [not null]
+  UserId nvarchar(450) [not null]
+  indexes {
+    (CommentId, UserId) [pk]
+  }
+}
+
+Table Attachments {
+  Id int [pk, increment]
+  TaskId int
+  CommentId int
+  UploadedById nvarchar(450) [not null]
+  FileName nvarchar(260) [not null]
+  ContentType nvarchar(100) [not null]
+  FileSizeBytes bigint [not null]
+  FileContent varbinary(max) [not null]
+  UploadedAt datetime2 [not null]
+  Note: 'CHECK: exactly one of TaskId / CommentId is not null'
+}
+
+Table TimeEntries {
+  Id int [pk, increment]
+  TaskId int [not null]
+  UserId nvarchar(450) [not null]
+  StartedAt datetime2 [not null]
+  EndedAt datetime2
+  DurationMinutes int [not null]
+  EntryMethod nvarchar(20) [not null]
+  WorkNote nvarchar(500)
+}
+
+// ---------- NOTIFICATIONS & LOGS ----------
+Table Notifications {
+  Id int [pk, increment]
+  UserId nvarchar(450) [not null]
+  TaskId int
+  CommentId int
+  Type nvarchar(50) [not null]
+  MessageText nvarchar(500) [not null]
+  CreatedAt datetime2 [not null]
+  IsRead bit [not null]
+}
+
+Table NotificationChannels {
+  Id int [pk, increment]
+  NotificationId int [not null]
+  Channel nvarchar(20) [not null]
+}
+
+Table NotificationPreferences {
+  Id int [pk, increment]
+  UserId nvarchar(450) [not null]
+  NotificationType nvarchar(50) [not null]
+  InAppEnabled bit [not null]
+  EmailEnabled bit [not null]
+  DigestFrequency nvarchar(20) [not null]
+  ReminderLeadMinutes int
+  indexes {
+    (UserId, NotificationType) [unique]
+  }
+}
+
+Table ActivityLogEntries {
+  Id int [pk, increment]
+  UserId nvarchar(450) [note: 'NULL when an automation rule acted']
+  TaskId int
+  ProjectId int
+  ActionType nvarchar(50) [not null]
+  Timestamp datetime2 [not null]
+  Description nvarchar(500)
+  EntityName nvarchar(100)
+  EntityId int [note: 'Id of the affected record when it is not a task or project']
+  OldValues nvarchar(max)
+  NewValues nvarchar(max)
+}
+
+// ---------- FILTERS, AUTOMATION, ADMIN ----------
+Table SavedFilters {
+  Id int [pk, increment]
+  UserId nvarchar(450) [not null]
+  ProjectId int
+  Name nvarchar(100) [not null]
+  CriteriaJson nvarchar(max) [not null]
+  SharingScope nvarchar(20) [not null]
+}
+
+Table Webhooks {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  Name nvarchar(100) [not null]
+  TargetUrl nvarchar(500) [not null]
+  IsActive bit [not null]
+}
+
+Table WebhookEvents {
+  Id int [pk, increment]
+  WebhookId int [not null]
+  EventName nvarchar(100) [not null]
+}
+
+Table AutomationRules {
+  Id int [pk, increment]
+  ProjectId int [not null]
+  WebhookId int
+  AutoAssignUserId nvarchar(450)
+  Name nvarchar(100) [not null]
+  TriggerType nvarchar(50) [not null]
+  ActionType nvarchar(50) [not null]
+  DueDateLeadMinutes int
+  IsEnabled bit [not null]
+  CreatedAt datetime2 [not null]
+}
+
+Table AutomationRuleLabels {
+  RuleId int [not null]
+  LabelId int [not null]
+  indexes {
+    (RuleId, LabelId) [pk]
+  }
+}
+
+Table AutomationRuleColumns {
+  RuleId int [not null]
+  ColumnId int [not null]
+  indexes {
+    (RuleId, ColumnId) [pk]
+  }
+}
+
+Table DashboardWidgets {
+  Id int [pk, increment]
+  UserId nvarchar(450) [not null]
+  WidgetType nvarchar(50) [not null]
+  DisplayPosition int [not null]
+  IsVisible bit [not null]
+}
+
+Table SystemSettings {
+  Id int [pk, increment]
+  Name nvarchar(100) [not null, unique]
+  Value nvarchar(max) [not null]
+  Description nvarchar(300)
+  LastModifiedAt datetime2 [not null]
+}
+
+// ---------- RELATIONSHIPS (many > one) ----------
+Ref: RolePermissions.RoleId > TeamRoles.Id
+Ref: RolePermissions.PermissionId > Permissions.Id
+Ref: Workspaces.OwnerId > Users.Id
+Ref: Teams.WorkspaceId > Workspaces.Id
+Ref: TeamMemberships.TeamId > Teams.Id
+Ref: TeamMemberships.UserId > Users.Id
+Ref: TeamMemberships.RoleId > TeamRoles.Id
+Ref: Invitations.TeamId > Teams.Id
+Ref: Invitations.RoleId > TeamRoles.Id
+Ref: Invitations.SentById > Users.Id
+
+Ref: ProjectTemplateColumns.TemplateId > ProjectTemplates.Id
+Ref: Projects.WorkspaceId > Workspaces.Id
+Ref: Projects.CreatedById > Users.Id
+Ref: Projects.TemplateId > ProjectTemplates.Id
+Ref: TeamProjects.TeamId > Teams.Id
+Ref: TeamProjects.ProjectId > Projects.Id
+Ref: Boards.ProjectId > Projects.Id
+Ref: BoardColumns.BoardId > Boards.Id
+Ref: Swimlanes.BoardId > Boards.Id
+Ref: Sprints.ProjectId > Projects.Id
+Ref: Milestones.ProjectId > Projects.Id
+Ref: Labels.ProjectId > Projects.Id
+Ref: CustomFields.ProjectId > Projects.Id
+Ref: CustomFieldAllowedValues.CustomFieldId > CustomFields.Id
+
+Ref: TaskTemplates.ProjectId > Projects.Id
+Ref: TaskTemplateChecklistItems.TaskTemplateId > TaskTemplates.Id
+Ref: Tasks.ColumnId > BoardColumns.Id
+Ref: Tasks.SwimlaneId > Swimlanes.Id
+Ref: Tasks.SprintId > Sprints.Id
+Ref: Tasks.MilestoneId > Milestones.Id
+Ref: Tasks.TaskTemplateId > TaskTemplates.Id
+Ref: Tasks.CreatedById > Users.Id
+Ref: ChecklistItems.TaskId > Tasks.Id
+Ref: TaskAssignees.TaskId > Tasks.Id
+Ref: TaskAssignees.UserId > Users.Id
+Ref: TaskLabels.TaskId > Tasks.Id
+Ref: TaskLabels.LabelId > Labels.Id
+Ref: TaskDependencies.SuccessorTaskId > Tasks.Id
+Ref: TaskDependencies.PredecessorTaskId > Tasks.Id
+Ref: TaskCustomFieldValues.TaskId > Tasks.Id
+Ref: TaskCustomFieldValues.CustomFieldId > CustomFields.Id
+
+Ref: Comments.TaskId > Tasks.Id
+Ref: Comments.AuthorId > Users.Id
+Ref: Comments.ParentCommentId > Comments.Id
+Ref: CommentMentions.CommentId > Comments.Id
+Ref: CommentMentions.UserId > Users.Id
+Ref: Attachments.TaskId > Tasks.Id
+Ref: Attachments.CommentId > Comments.Id
+Ref: Attachments.UploadedById > Users.Id
+Ref: TimeEntries.TaskId > Tasks.Id
+Ref: TimeEntries.UserId > Users.Id
+
+Ref: Notifications.UserId > Users.Id
+Ref: Notifications.TaskId > Tasks.Id
+Ref: Notifications.CommentId > Comments.Id
+Ref: NotificationChannels.NotificationId > Notifications.Id
+Ref: NotificationPreferences.UserId > Users.Id
+Ref: ActivityLogEntries.UserId > Users.Id
+Ref: ActivityLogEntries.TaskId > Tasks.Id
+Ref: ActivityLogEntries.ProjectId > Projects.Id
+
+Ref: SavedFilters.UserId > Users.Id
+Ref: SavedFilters.ProjectId > Projects.Id
+Ref: Webhooks.ProjectId > Projects.Id
+Ref: WebhookEvents.WebhookId > Webhooks.Id
+Ref: AutomationRules.ProjectId > Projects.Id
+Ref: AutomationRules.WebhookId > Webhooks.Id
+Ref: AutomationRules.AutoAssignUserId > Users.Id
+Ref: AutomationRuleLabels.RuleId > AutomationRules.Id
+Ref: AutomationRuleLabels.LabelId > Labels.Id
+Ref: AutomationRuleColumns.RuleId > AutomationRules.Id
+Ref: AutomationRuleColumns.ColumnId > BoardColumns.Id
+Ref: DashboardWidgets.UserId > Users.Id
+
+// ---------- GROUPS (for readability) ----------
+TableGroup Identity_and_Teams {
+  Users
+  TeamRoles
+  Permissions
+  RolePermissions
+  Workspaces
+  Teams
+  TeamMemberships
+  Invitations
+}
+
+TableGroup Projects_and_Boards {
+  ProjectTemplates
+  ProjectTemplateColumns
+  Projects
+  TeamProjects
+  Boards
+  BoardColumns
+  Swimlanes
+  Sprints
+  Milestones
+  Labels
+  CustomFields
+  CustomFieldAllowedValues
+}
+
+TableGroup Tasks {
+  TaskTemplates
+  TaskTemplateChecklistItems
+  Tasks
+  ChecklistItems
+  TaskAssignees
+  TaskLabels
+  TaskDependencies
+  TaskCustomFieldValues
+}
+
+TableGroup Collaboration {
+  Comments
+  CommentMentions
+  Attachments
+  TimeEntries
+}
+
+TableGroup Notifications_and_Logs {
+  Notifications
+  NotificationChannels
+  NotificationPreferences
+  ActivityLogEntries
+}
+
+TableGroup Automation_and_Admin {
+  SavedFilters
+  Webhooks
+  WebhookEvents
+  AutomationRules
+  AutomationRuleLabels
+  AutomationRuleColumns
+  DashboardWidgets
+  SystemSettings
+}
