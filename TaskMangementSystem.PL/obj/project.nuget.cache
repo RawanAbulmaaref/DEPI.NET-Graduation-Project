@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pW2K1tddkPA=",
+  "dgSpecHash": "ZQ+K+1qCHIM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+  "projectFilePath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\rabul\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+    "C:\\Users\\o\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
   ],
   "logs": []
 }

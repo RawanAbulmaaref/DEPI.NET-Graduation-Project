@@ -15,4 +15,5 @@ public class Workspace
     public ApplicationUser Owner { get; set; } = null!;
 
     public ICollection<Team> Teams { get; set; } = new List<Team>();
+    public ICollection<Project> Projects { get; set; } = new List<Project>();
 }

@@ -152,23 +152,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rabul\\.nuget\\packages\\": {},
+    "C:\\Users\\o\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+      "projectUniqueName": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
       "projectName": "TaskMangementSystem.PL",
-      "projectPath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
-      "packagesPath": "C:\\Users\\rabul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskMangementSystem.PL\\obj\\",
+      "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+      "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
+      "outputPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\rabul\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\o\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -184,8 +184,8 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
-              "projectPath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj"
+            "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
+              "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj"
             }
           }
         }
@@ -200,7 +200,7 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.400"
     },
     "frameworks": {
       "net10.0": {
@@ -231,7 +231,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

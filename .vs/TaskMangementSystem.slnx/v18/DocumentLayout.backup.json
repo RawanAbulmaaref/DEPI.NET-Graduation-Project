@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56E09CB5-F022-419C-96FC-61D9271698BD}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{56E09CB5-F022-419C-96FC-61D9271698BD}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|solutionrelative:taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F26583C7-8339-44DF-B424-E1DC3624D8B1}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F26583C7-8339-44DF-B424-E1DC3624D8B1}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|solutionrelative:taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94E0F932-634E-4FFF-87C8-BB35F1C2830D}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{94E0F932-634E-4FFF-87C8-BB35F1C2830D}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|solutionrelative:taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaskManagementSystem.BLL",
+              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "RelativeDocumentMoniker": "TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "RelativeToolTip": "TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-21T19:53:49.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TaskManagementSystem.DAL",
+              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "RelativeDocumentMoniker": "TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "RelativeToolTip": "TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-21T19:50:51.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskManagementSystem.Domain",
+              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "RelativeDocumentMoniker": "TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "RelativeToolTip": "TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-21T19:50:04.846Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

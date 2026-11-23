@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\",
+  "WorkspaceRootPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{56E09CB5-F022-419C-96FC-61D9271698BD}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{56E09CB5-F022-419C-96FC-61D9271698BD}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|solutionrelative:taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1BE187B3-7A70-39AC-C30F-8F4B64223C69}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|f:\\program files\\days of backend\\depi_project\\depi.net-graduation-project\\taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BE187B3-7A70-39AC-C30F-8F4B64223C69}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|solutionrelative:taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F26583C7-8339-44DF-B424-E1DC3624D8B1}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F26583C7-8339-44DF-B424-E1DC3624D8B1}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|solutionrelative:taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{7FF1627A-433C-ECF4-DBB3-CC66EAACF533}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|f:\\program files\\days of backend\\depi_project\\depi.net-graduation-project\\taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7FF1627A-433C-ECF4-DBB3-CC66EAACF533}|TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj|solutionrelative:taskmanagementsystem.bll\\taskmanagementsystem.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94E0F932-634E-4FFF-87C8-BB35F1C2830D}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|c:\\users\\rabul\\downloads\\local products support platform\\project_code\\taskmangementsystem\\taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{94E0F932-634E-4FFF-87C8-BB35F1C2830D}|TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj|solutionrelative:taskmanagementsystem.domain\\taskmanagementsystem.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{C5050E94-56AE-A670-1321-4AE54A4CEAE9}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|f:\\program files\\days of backend\\depi_project\\depi.net-graduation-project\\taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C5050E94-56AE-A670-1321-4AE54A4CEAE9}|TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj|solutionrelative:taskmanagementsystem.dal\\taskmanagementsystem.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,15 +22,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TaskManagementSystem.BLL",
-              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "DocumentIndex": 1,
+              "Title": "TaskManagementSystem.BLL.csproj",
+              "DocumentMoniker": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
               "RelativeDocumentMoniker": "TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
-              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+              "ToolTip": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
               "RelativeToolTip": "TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -39,11 +39,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TaskManagementSystem.DAL",
-              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "DocumentIndex": 2,
+              "Title": "TaskManagementSystem.DAL.csproj",
+              "DocumentMoniker": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
               "RelativeDocumentMoniker": "TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
-              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+              "ToolTip": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
               "RelativeToolTip": "TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -52,11 +52,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TaskManagementSystem.Domain",
-              "DocumentMoniker": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "DocumentIndex": 0,
+              "Title": "TaskManagementSystem.Domain.csproj",
+              "DocumentMoniker": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
               "RelativeDocumentMoniker": "TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
-              "ToolTip": "C:\\Users\\rabul\\Downloads\\Local Products Support Platform\\Project_Code\\TaskMangementSystem\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+              "ToolTip": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
               "RelativeToolTip": "TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
