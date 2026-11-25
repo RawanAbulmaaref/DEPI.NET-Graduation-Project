@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZQ+K+1qCHIM=",
+  "success": true,
+  "projectFilePath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\o\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}
