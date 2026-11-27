@@ -27,6 +27,17 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Label> Labels => Set<Label>();
     public DbSet<CustomField> CustomFields => Set<CustomField>();
 
+    // Tasks
+    public DbSet<CustomFieldAllowedValue> CustomFieldAllowedValues => Set<CustomFieldAllowedValue>();
+    public DbSet<TaskTemplate> TaskTemplates => Set<TaskTemplate>();
+    public DbSet<TaskTemplateChecklistItem> TaskTemplateChecklistItems => Set<TaskTemplateChecklistItem>();
+    public DbSet<TaskItem> Tasks => Set<TaskItem>();
+    public DbSet<ChecklistItem> ChecklistItems => Set<ChecklistItem>();
+    public DbSet<TaskAssignee> TaskAssignees => Set<TaskAssignee>();
+    public DbSet<TaskLabel> TaskLabels => Set<TaskLabel>();
+    public DbSet<TaskDependency> TaskDependencies => Set<TaskDependency>();
+    public DbSet<TaskCustomFieldValue> TaskCustomFieldValues => Set<TaskCustomFieldValue>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
