@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj": {}
+    "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj": {}
   },
   "projects": {
-    "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
+    "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+        "projectUniqueName": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
         "projectName": "TaskManagementSystem.BLL",
-        "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
-        "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\obj\\",
+        "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj",
+        "packagesPath": "C:\\Users\\GAMA\\.nuget\\packages\\",
+        "outputPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\o\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,11 +33,11 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj": {
-                "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj"
+              "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj": {
+                "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj"
               },
-              "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
-                "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj"
+              "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
+                "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj"
               }
             }
           }
@@ -52,12 +52,26 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -74,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -352,20 +366,20 @@
         }
       }
     },
-    "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj": {
+    "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+        "projectUniqueName": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
         "projectName": "TaskManagementSystem.DAL",
-        "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
-        "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\obj\\",
+        "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\TaskManagementSystem.DAL.csproj",
+        "packagesPath": "C:\\Users\\GAMA\\.nuget\\packages\\",
+        "outputPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\o\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -381,8 +395,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
-                "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj"
+              "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
+                "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj"
               }
             }
           }
@@ -397,12 +411,34 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -419,7 +455,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -697,20 +733,20 @@
         }
       }
     },
-    "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
+    "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+        "projectUniqueName": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
         "projectName": "TaskManagementSystem.Domain",
-        "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
-        "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\obj\\",
+        "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\TaskManagementSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\GAMA\\.nuget\\packages\\",
+        "outputPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\o\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -738,13 +774,25 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[10.0.0, )"
@@ -766,7 +814,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -1044,20 +1092,20 @@
         }
       }
     },
-    "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj": {
+    "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+        "projectUniqueName": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
         "projectName": "TaskMangementSystem.PL",
-        "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
-        "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
-        "outputPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\obj\\",
+        "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\TaskMangementSystem.PL.csproj",
+        "packagesPath": "C:\\Users\\GAMA\\.nuget\\packages\\",
+        "outputPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskMangementSystem.PL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\o\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\GAMA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1073,8 +1121,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
-                "projectPath": "F:\\Program Files\\Days of backEnd\\DEPI_project\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj"
+              "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj": {
+                "projectPath": "E:\\TaskFlow\\DEPI.NET-Graduation-Project\\TaskManagementSystem.BLL\\TaskManagementSystem.BLL.csproj"
               }
             }
           }
@@ -1089,13 +1137,19 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.400"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.23.0, )"
@@ -1120,7 +1174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.402/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.AspNetCore": "(,10.0.32767]",
             "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",
