@@ -38,6 +38,28 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<TaskDependency> TaskDependencies => Set<TaskDependency>();
     public DbSet<TaskCustomFieldValue> TaskCustomFieldValues => Set<TaskCustomFieldValue>();
 
+    // Collaboration
+    public DbSet<Comment> Comments => Set<Comment>();
+    public DbSet<CommentMention> CommentMentions => Set<CommentMention>();
+    public DbSet<Attachment> Attachments => Set<Attachment>();
+    public DbSet<TimeEntry> TimeEntries => Set<TimeEntry>();
+
+    // Notifications & Logs
+    public DbSet<Notification> Notifications => Set<Notification>();
+    public DbSet<NotificationChannel> NotificationChannels => Set<NotificationChannel>();
+    public DbSet<NotificationPreference> NotificationPreferences => Set<NotificationPreference>();
+    public DbSet<ActivityLogEntry> ActivityLogEntries => Set<ActivityLogEntry>();
+
+    // Filters, Automation, Admin
+    public DbSet<SavedFilter> SavedFilters => Set<SavedFilter>();
+    public DbSet<Webhook> Webhooks => Set<Webhook>();
+    public DbSet<WebhookEvent> WebhookEvents => Set<WebhookEvent>();
+    public DbSet<AutomationRule> AutomationRules => Set<AutomationRule>();
+    public DbSet<AutomationRuleLabel> AutomationRuleLabels => Set<AutomationRuleLabel>();
+    public DbSet<AutomationRuleColumn> AutomationRuleColumns => Set<AutomationRuleColumn>();
+    public DbSet<DashboardWidget> DashboardWidgets => Set<DashboardWidget>();
+    public DbSet<SystemSetting> SystemSettings => Set<SystemSetting>();
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
